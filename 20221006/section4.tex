@@ -6,6 +6,228 @@
 \subsection{理論値との比較}
 被測定回路$1,2,3$の4端子定数 $(A, B, C, D)$の測定値を理論値と比較して議論する．
 このためには，各測定回路でのF行列の理論式を求め，その値を計算する必要がある．
+\subsubsection{理論値}
+    \begin{enumerate}
+        \item 被測定回路1
+        $$
+        A_1=\frac{V_1}{V_2}=\frac{V_1}{\frac{Z_2}{Z_1+Z_2}V_1}=1+\frac{Z_1}{Z_2}=1+j\omega RC=1+j6.28=6.36\angle80.95^\circ
+        $$
+        $$
+        B_1=\frac{V_1}{I_2}=\frac{V_1}{\frac{V_1}{Z_1}}=Z1=R=1.00\times10^3=1.00\times10^3\angle0.00^\circ
+        $$
+        $$
+        C_1=\frac{I_1}{V_2}=\frac{I_1}{Z_2I_1}=\frac{1}{Z_2}=j\omega C=j6.28\times10^{-3}=6.28\times10^{-3}\angle90.00^\circ
+        $$
+        $$
+        D_1=\frac{I_1}{I_2}=1=1.00\angle0.00^\circ
+        $$
+        \item 被測定回路2
+        
+        被測定回路1の入出力を入れ替えたものであるので
+        $$
+        A_2=1.00\angle0.00^\circ
+        $$
+        $$
+        B_2=1.00\times10^3\angle0.00^\circ
+        $$
+        $$
+        C_2=6.28\times10^{-3}\angle90.00^\circ
+        $$
+        $$
+        D_2=6.36\angle80.95^\circ
+        $$
+        \item 被測定回路3
+        
+        被測定回路1と被測定回路2の縦続接続であるので
+        $$
+        \left[\begin{array}{ll}
+        A_3 & B_3 \\
+        C_3 & D_3
+        \end{array}\right]=\left[\begin{array}{ll}
+        A_1 & B_1 \\
+        C_1 & D_1
+        \end{array}\right]\left[\begin{array}{ll}
+        A_2 & B_2 \\
+        C_2 & D_2
+        \end{array}\right]=\left[\begin{array}{ll}
+        A_1A_2+B_1C_2 & A_1B_2+B_1D_2 \\
+        C_1A_2+D_1C_2 & C_1B_2+D_1D_2
+        \end{array}\right]
+        $$
+        $$
+        =\left[\begin{array}{ll}
+        12.60\angle85.45^\circ & 12.72\times10^3\angle80.95^\circ \\
+        12.56\times10^{-3}\angle90^\circ & 12.60\angle85.45^\circ
+        \end{array}\right]
+        $$
+    \end{enumerate}
+
+\newpage
+
+\subsubsection{測定値}
+    \begin{enumerate}
+        \item 被測定回路1
+        \begin{itemize}
+            \item 4端子定数$A,C$の測定
+            $$
+            |V_1|=8.20V
+            $$
+            $$
+            |V_2|=1.15V
+            $$
+            $$
+            |V_{10}|=80.00mV
+            $$
+            $$
+            \theta_A=85.50^\circ
+            $$
+            $$
+            \theta_C=82.80^\circ
+            $$
+
+            $$
+            |A|=\frac{\left|V_1\right|}{\left|V_2\right|}=7.13
+            $$
+            $$
+            |C|=\frac{\frac{\left|V_{10}\right|}{R_{10}}}{\left|V_2\right|}=\frac{\left|V_{10}\right|}{\left|V_2\right| R_{10}}=6.96\times10^{-3}
+            $$
+
+            \item 4端子定数$B,D$の測定
+            $$
+            |V_1|=7.50V
+            $$
+            $$
+            |V_{10}|=80.00mV
+            $$
+            $$
+            |V_{20}|=78.00mV
+            $$
+            $$
+            \theta_B=0.00^\circ
+            $$
+            $$
+            \theta_D=0.00^\circ
+            $$
+
+            $$
+            |B|=\frac{\left|V_1\right|}{\frac{\left|V_{20}\right|}{R_{20}}}=\frac{\left|V_1\right| R_{20}}{\left|V_{20}\right|}=961.54
+            $$
+            $$
+            |D|=\frac{\frac{\left|V_{10}\right|}{R_{10}}}{\frac{\left|V_{20}\right|}{R_{20}}}=\frac{\left|V_{10}\right| R_{20}}{\left|V_{20}\right| R_{10}}=1.03
+            $$
+
+        \end{itemize}
+
+        \newpage
+        
+        \item 被測定回路2
+        \begin{itemize}
+            \item 4端子定数$A,C$の測定
+            $$
+            |V_1|=3.00V
+            $$
+            $$
+            |V_2|=3.00V
+            $$
+            $$
+            |V_{10}|=190.00mV
+            $$
+            $$
+            \theta_A=0.00^\circ
+            $$
+            $$
+            \theta_C=90.00^\circ
+            $$
+
+            $$
+            |A|=\frac{\left|V_1\right|}{\left|V_2\right|}=1.00
+            $$
+            $$
+            |C|=\frac{\frac{\left|V_{10}\right|}{R_{10}}}{\left|V_2\right|}=\frac{\left|V_{10}\right|}{\left|V_2\right| R_{10}}=6.33\times10^{-3}
+            $$
+
+            \item 4端子定数$B,D$の測定
+            $$
+            |V_1|=2.70V
+            $$
+            $$
+            |V_{10}|=185.00mV
+            $$
+            $$
+            |V_{20}|=34.00mV
+            $$
+            $$
+            \theta_B=0.00^\circ
+            $$
+            $$
+            \theta_D=86.40^\circ
+            $$
+
+            $$
+            |B|=\frac{\left|V_1\right|}{\frac{\left|V_{20}\right|}{R_{20}}}=\frac{\left|V_1\right| R_{20}}{\left|V_{20}\right|}=794.12
+            $$
+            $$
+            |D|=\frac{\frac{\left|V_{10}\right|}{R_{10}}}{\frac{\left|V_{20}\right|}{R_{20}}}=\frac{\left|V_{10}\right| R_{20}}{\left|V_{20}\right| R_{10}}=5.44
+            $$
+        \end{itemize}
+
+        \newpage
+        
+        \item 被測定回路3
+        \begin{itemize}
+            \item 4端子定数$A,C$の測定
+            $$
+            |V_1|=7.20V
+            $$
+            $$
+            |V_2|=620.00mV
+            $$
+            $$
+            |V_{10}|=80.00mV
+            $$
+            $$
+            \theta_A=86.40^\circ
+            $$
+            $$
+            \theta_C=82.80^\circ
+            $$
+
+            $$
+            |A|=\frac{\left|V_1\right|}{\left|V_2\right|}=11.61
+            $$
+            $$
+            |C|=\frac{\frac{\left|V_{10}\right|}{R_{10}}}{\left|V_2\right|}=\frac{\left|V_{10}\right|}{\left|V_2\right| R_{10}}=12.90\times10^{-3}
+            $$
+
+            \item 4端子定数$B,D$の測定
+            $$
+            |V_1|=7.40V
+            $$
+            $$
+            |V_{10}|=80.00mV
+            $$
+            $$
+            |V_{20}|=14.00mV
+            $$
+            $$
+            \theta_B=90.00^\circ
+            $$
+            $$
+            \theta_D=90.00^\circ
+            $$
+
+            $$
+            |B|=\frac{\left|V_1\right|}{\frac{\left|V_{20}\right|}{R_{20}}}=\frac{\left|V_1\right| R_{20}}{\left|V_{20}\right|}=5.29\times10^3
+            $$
+            $$
+            |D|=\frac{\frac{\left|V_{10}\right|}{R_{10}}}{\frac{\left|V_{20}\right|}{R_{20}}}=\frac{\left|V_{10}\right| R_{20}}{\left|V_{20}\right| R_{10}}=5.71
+            $$
+        \end{itemize}
+    \end{enumerate}
+
+\newpage
+
+
 
 \subsection{入出力端子を入れ替えた場合の関係}
 被測定回路$1,2$の4端子定数の測定値より，入力端子と出力端子を入れ換えた場合の関係式
@@ -14,12 +236,42 @@ A_2=D_1, B_2=B_1, C_2=C_1, D_2=A_1
 $$
 が成り立っているかどうかを検討する．
 
+$$A_2=D_1$$
+$$1.00=1.03$$
+
+$$B_2=B_1$$
+$$794.12=961.54$$
+
+$$C_2=C_1$$
+$$6.33\times10^{-3}=6.96\times10^{-3}$$
+
+$$D_2=A_1$$
+$$5.44=7.13$$
+
 \subsection{自然回路としての関係式}
 被測定回路$1,2,3$の4端子定数$(A, B, C, D)$の測定値より
 $$
 A D-B C=1
 $$
-が成り立っているかどうか検討する．  
+が成り立っているかどうか検討する． 
+
+\begin{enumerate}
+    \item 被測定回路1
+    $$
+    A_1D_1-B_1C_1=0.65
+    $$
+    
+    \item 被測定回路2
+    $$
+    A_2D_2-B_2C_2=0.41
+    $$
+    
+    \item 被測定回路3
+    $$
+    A_3D_3-B_3C_3=-1.95
+    $$
+    
+\end{enumerate}
 
 \subsection{縦続接続}
 被測定回路3は被測定回路$1,2$を縦続接続したものである．縦続接続の場合の関係式
@@ -36,3 +288,31 @@ C_2 & D_2
 \end{array}\right]
 $$
 が成り立っているかどうか検討する．
+
+$$
+A_3=A_1A_2+B_1C_2=13.22
+$$
+$$
+B_3=A_1B_2+B_1D_2=10.89\times10^3
+$$
+$$
+C_3=C_1A_2+D_1C_2=13.48\times10^{-3}
+$$
+$$
+D_3=C_1B_2+D_1D_2=11.13
+$$
+
+
+被測定回路1,2の測定値から，縦続接続の場合の関係式を用いた被測定回路3のF行列は理論とほぼ一致した．
+このことから被測定回路1,2の測定は自然回路としての関係式で誤差が出たものの，測定方法に問題はなかったといえる．
+被測定回路1,2において誤差が発生した原因は，目視によるオシロスコープ波形の測定方法に問題があったと考えられる．
+波形に現れるノイズを小さくすることに意識をとらわれ，すべての実験においてRC発信機の出力を最大にしていた．
+オシロスコープに表示された波形は画面いっぱいに表示されたものもあれば，画面よりも大きい波形が表示されたために，
+VOLTS/DIVの値を大きくする必要があり，波形が画面の半分までしか表示されないことがあった．
+波形が最も大きな状態で測定することができなかったために，目視による測定で誤差が生じたと考えられる．
+各々の測定においてRC発信機の出力を最適にすべきであった．
+
+一方被測定回路3の4端子定数$B,D$の測定は他の測定と比較して大きく誤差が出た．
+測定箇所，または測定回路に問題があったと考えられる．他の測定と比較して使用した素子が多くなっているので，
+誤った抵抗を回路に組み込んだ可能性がある．測定時には他の回路よりも小さな電圧値が出力され，ノイズが多く乗っていたため，
+誤差がより大きくなったと考えられる．
