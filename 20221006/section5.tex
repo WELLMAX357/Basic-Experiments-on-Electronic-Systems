@@ -1,0 +1,142 @@
+% !TEX root = main.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{考察}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{理論値との比較}
+被測定回路$1,2,3$の4端子定数 $(A, B, C, D)$の測定値を理論値と比較して議論する．
+このためには，各測定回路でのF行列の理論式を求め，その値を計算する必要がある．
+\subsection*{理論値}
+    \begin{description}
+        \item 被測定回路1
+        $$
+        A_1=\frac{V_1}{V_2}=\frac{V_1}{\frac{Z_2}{Z_1+Z_2}V_1}=1+\frac{Z_1}{Z_2}=1+j\omega RC=1+j6.28=6.36\angle80.95^\circ
+        $$
+        $$
+        B_1=\frac{V_1}{I_2}=\frac{V_1}{\frac{V_1}{Z_1}}=Z1=R=1.00\times10^3=1.00\times10^3\angle0.00^\circ
+        $$
+        $$
+        C_1=\frac{I_1}{V_2}=\frac{I_1}{Z_2I_1}=\frac{1}{Z_2}=j\omega C=j6.28\times10^{-3}=6.28\times10^{-3}\angle90.00^\circ
+        $$
+        $$
+        D_1=\frac{I_1}{I_2}=1=1.00\angle0.00^\circ
+        $$
+        \item 被測定回路2
+        
+        被測定回路1の入出力を入れ替えたものであるので
+        $$
+        A_2=1.00\angle0.00^\circ
+        $$
+        $$
+        B_2=1.00\times10^3\angle0.00^\circ
+        $$
+        $$
+        C_2=6.28\times10^{-3}\angle90.00^\circ
+        $$
+        $$
+        D_2=6.36\angle80.95^\circ
+        $$
+        \item 被測定回路3
+        
+        被測定回路1と被測定回路2の縦続接続であるので
+        $$
+        \left[\begin{array}{ll}
+        A_3 & B_3 \\
+        C_3 & D_3
+        \end{array}\right]=\left[\begin{array}{ll}
+        A_1 & B_1 \\
+        C_1 & D_1
+        \end{array}\right]\left[\begin{array}{ll}
+        A_2 & B_2 \\
+        C_2 & D_2
+        \end{array}\right]=\left[\begin{array}{ll}
+        A_1A_2+B_1C_2 & A_1B_2+B_1D_2 \\
+        C_1A_2+D_1C_2 & C_1B_2+D_1D_2
+        \end{array}\right]
+        $$
+        $$
+        =\left[\begin{array}{ll}
+        12.60\angle85.45^\circ & 12.72\times10^3\angle80.95^\circ \\
+        12.56\times10^{-3}\angle90^\circ & 12.60\angle85.45^\circ
+        \end{array}\right]
+        $$
+    \end{description}
+
+
+
+\newpage
+
+
+
+\subsection{入出力端子を入れ替えた場合の関係}
+被測定回路$1,2$の4端子定数の測定値より，入力端子と出力端子を入れ換えた場合の関係式
+$$
+A_2=D_1, B_2=B_1, C_2=C_1, D_2=A_1
+$$
+が成り立っているかどうかを検討する．
+
+$$A_2=D_1$$
+$$1.00=1.03$$
+
+$$B_2=B_1$$
+$$794.12=961.54$$
+
+$$C_2=C_1$$
+$$6.33\times10^{-3}=6.96\times10^{-3}$$
+
+$$D_2=A_1$$
+$$5.44=7.13$$
+
+\subsection{自然回路としての関係式}
+被測定回路$1,2,3$の4端子定数$(A, B, C, D)$の測定値より
+$$
+A D-B C=1
+$$
+が成り立っているかどうか検討する． 
+
+\begin{description}
+    \item 被測定回路1
+    $$
+    A_1D_1-B_1C_1=0.65
+    $$
+    
+    \item 被測定回路2
+    $$
+    A_2D_2-B_2C_2=0.41
+    $$
+    
+    \item 被測定回路3
+    $$
+    A_3D_3-B_3C_3=-1.95
+    $$
+    
+\end{description}
+
+\subsection{縦続接続}
+被測定回路3は被測定回路$1,2$を縦続接続したものである．縦続接続の場合の関係式
+$$
+\left[\begin{array}{ll}
+A_3 & B_3 \\
+C_3 & D_3
+\end{array}\right]=\left[\begin{array}{ll}
+A_1 & B_1 \\
+C_1 & D_1
+\end{array}\right]\left[\begin{array}{cc}
+A_2 & B_2 \\
+C_2 & D_2
+\end{array}\right]
+$$
+が成り立っているかどうか検討する．
+
+$$
+A_3=A_1A_2+B_1C_2=13.22
+$$
+$$
+B_3=A_1B_2+B_1D_2=10.89\times10^3
+$$
+$$
+C_3=C_1A_2+D_1C_2=13.48\times10^{-3}
+$$
+$$
+D_3=C_1B_2+D_1D_2=11.13
+$$
