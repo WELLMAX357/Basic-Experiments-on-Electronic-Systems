@@ -62,9 +62,89 @@
         $$
     \end{description}
 
+\newpage
 
+実験によって算出した値と，理論値の比較を行ったものを次の表1,表2,表3,表4,表5,表6に示す
+
+\begin{table}[!ht]
+    \centering
+    \caption{被測定回路1におけるF行列の大きさの理論値と測定値の比較}
+    \begin{tabular}{c|ccc}
+    \hline
+        大きさ & 理論値 & 測定値 & 相対誤差率[\%] \\ \hline
+        |A| & 6.36 & 7.04 & 10.69 \\ 
+        |B| & 1000.00 & 961.54 & -3.85 \\ 
+        |C| & 0.01 & 0.01 & 10.83 \\ 
+        |D| & 1.00 & 1.03 & 3.00 \\ 
+    \end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{被測定回路1におけるF行列の偏角の理論値と測定値の比較}
+    \begin{tabular}{c|ccc}
+    \hline
+        偏角 & 理論値 & 測定値 & 相対誤差率[\%] \\ \hline
+        $\theta_A$ & 80.95 & 85.50 & 5.62 \\ 
+        $\theta_B$ & 0.00 & 0.00 & 0.00 \\ 
+        $\theta_C$ & 90.00 & 82.80 & -8.00 \\
+        $\theta_D$ & 0.00 & 0.00 & 0.00 \\
+    \end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{被測定回路2におけるF行列の大きさの理論値と測定値の比較}
+    \begin{tabular}{c|ccc}
+    \hline
+        大きさ & 理論値 & 測定値 & 相対誤差率[\%] \\ \hline
+        |A| & 1.00 & 1.00 & 0.00 \\ 
+        |B| & 1000.00 & 794.12 & -20.59 \\ 
+        |C| & 0.01 & 0.01 & 0.80 \\ 
+        |D| & 6.36 & 5.44 & -14.47 \\ 
+    \end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{被測定回路2におけるF行列の偏角の理論値と測定値の比較}
+    \begin{tabular}{c|ccc}
+    \hline
+        偏角 & 理論値 & 測定値 & 相対誤差率[\%] \\ \hline
+        $\theta_A$ & 0.00 & 0.00 & 0.00 \\ 
+        $\theta_B$ & 0.00 & 0.00 & 0.00 \\ 
+        $\theta_C$ & 90.00 & 90.00 & 0.00 \\
+        $\theta_D$ & 80.95 & 86.40 & 6.73 \\
+    \end{tabular}
+\end{table}
 
 \newpage
+
+\begin{table}[!ht]
+    \centering
+    \caption{被測定回路3におけるF行列の大きさの理論値と測定値の比較}
+    \begin{tabular}{c|ccc}
+    \hline
+        大きさ & 理論値 & 測定値 & 相対誤差率[\%] \\ \hline
+        |A| & 12.60 & 11.61 & -7.86 \\ 
+        |B| & 12720.00 & 5290.00 & -58.41 \\ 
+        |C| & 0.01 & 0.01 & 2.71 \\ 
+        |D| & 12.60 & 5.71 & -54.68 \\ 
+    \end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{被測定回路3におけるF行列の偏角の理論値と測定値の比較}
+    \begin{tabular}{c|ccc}
+    \hline
+        偏角 & 理論値 & 測定値 & 相対誤差率[\%] \\ \hline
+        $\theta_A$ & 85.45 & 86.40 & 1.11 \\ 
+        $\theta_B$ & 80.95 & 90.00 & 11.18 \\
+        $\theta_C$ & 90.00 & 82.80 & -8.00 \\
+        $\theta_D$ & 85.45 & 90.00 & 5.32 \\ 
+    \end{tabular}
+\end{table}
 
 
 
@@ -85,7 +165,7 @@ $$C_2=C_1$$
 $$6.33\times10^{-3}=6.96\times10^{-3}$$
 
 $$D_2=A_1$$
-$$5.44=7.13$$
+$$5.44=7.04$$
 
 \subsection{自然回路としての関係式}
 被測定回路$1,2,3$の4端子定数$(A, B, C, D)$の測定値より
