@@ -50,3 +50,21 @@
 
 (5)式は$q(t)=C_1^{\prime} \exp (-\alpha t) \sin \beta t+C_2^{\prime} \exp (-\alpha t) \cos \beta t+C V$
 と表すこともできる．
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[]{figure1.drawio.pdf}
+        \caption{RLC直列回路}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[->,>=stealth,semithick] (-pi,0)--(pi,0) node[right]{$t$}; %x軸
+            \draw[->,>=stealth,semithick] (0,-2)--(0,2) node[right]{$V(t)$}; %y軸
+            \draw[very thick] (-pi,-1) -- (0,-1) node[right]{$-V$} -- (0,1) node[left]{$+V$} -- (pi,1);
+        \end{tikzpicture}
+        \caption{ステップ関数}
+    \end{center}
+\end{figure}
