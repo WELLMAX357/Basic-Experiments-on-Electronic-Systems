@@ -3,3 +3,50 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{理論}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+図 1 に示す回路で，最初，スイッチ S はの側に倒してあり，
+十分長い時間が経過しているもの とする．
+キャパシタが直流電圧 $-V$ で充電されている状態で，
+時刻 $t=0$ において、スイッチ S を B 
+の側へ切り替えて直流電圧 $V$ を印加する．印加される電圧の時間変化は，
+図 2 の階段状の関数で表 される．
+
+この場合の回路方程式は，回路に流れる電流を $i(t)$ として， $t>0$ で
+\begin{align}
+    L \frac{d i(t)}{d t}+R i(t)+\frac{1}{C} \int i(t) d t=V
+\end{align}
+となり，これよりキャパシタの電荷 $q(t)$ に関する微分方程式
+\begin{align}
+    L \frac{d^2 q(t)}{d t^2}+R \frac{d q(t)}{d t}+\frac{1}{C} q(t)=V
+\end{align}
+が得られる．
+
+(2) 式の 2 階線形微分方程式は，特性方程式 $L p^2+R p+1 / C=0$ 
+の解の判別条件に応じて次の解 をもつ．
+ただし， $C_1, C_2$ は初期条件で決まる定数である．
+
+\begin{enumerate}
+    \item $R^2>4L/C$のとき
+        \begin{align}
+            q(t)=C_1 \exp \{(-\alpha+\beta) t\}+C_2 \exp \{(-\alpha-\beta) t\}+C V
+        \end{align}
+        \begin{align*}
+            ただし \quad \alpha=\frac{R}{2 L}, \quad \beta=\sqrt{\left(\frac{R}{2 L}\right)^2-\frac{1}{L C}}
+        \end{align*}
+
+    \item $R^2=4 L / C$ のとき
+        \begin{align}
+            q(t)=\left(C_1+C_2 t\right) \exp (-\alpha t)+C V
+        \end{align}
+
+    \item $R^2<4 L / C$ のとき
+        \begin{align}
+            q(t)=C_1 \exp (-\alpha t) \sin \left(\beta t+C_2\right)+C V\quad(減㐮振動解)
+        \end{align}
+        \begin{align*}
+            ただし \quad \alpha=\frac{R}{2 L}, \quad \beta=\sqrt{\frac{1}{L C}-\left(\frac{R}{2 L}\right)^2}
+        \end{align*}
+\end{enumerate}
+
+(5) 式は $q(t)=C_1^{\prime} \exp (-\alpha t) \sin \beta t+C_2^{\prime} \exp (-\alpha t) \cos \beta t+C V$
+ と表すこともできる．
