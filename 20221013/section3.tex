@@ -60,3 +60,20 @@ $\mathrm{R}=1\,\mathrm{k}\Omega$である．
     \item ブレッドボード
     \item Qucs\quad 0.0.16
 \end{enumerate}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[]{figure2.drawio.pdf}
+        \caption{測定回路}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[->,>=stealth,semithick] (-pi,0)--(pi,0) node[right]{$t$}; %x軸
+            \draw[very thick] (-pi,-1) node[left]{$-V$} -- (-pi/2,-1) -- (-pi/2,0) node[below left]{$0$} -- (-pi/2,1) -- (0,1) -- (0,0) node[below left]{$T/2$} -- (0,-1) -- (pi/2,-1) -- (pi/2,0) node[below left]{$T$}  -- (pi/2,1) -- (pi,1) node[right]{$+V$};
+        \end{tikzpicture}
+        \caption{矩形波}
+    \end{center}
+\end{figure}
