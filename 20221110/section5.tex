@@ -25,14 +25,51 @@
         また，$6.0\,\si{\volt}$に対する等電位線を
         $x = ay^2 + by + c$\,[mm]とおくと最小二乗法より，
         $$
-        123
+        \left(\begin{array}{l}
+        a \\
+        b \\
+        c
+        \end{array}\right)=\left(\begin{array}{ccc}
+        \sum y_i^4 & \sum y_i^3 & \sum y_i^2 \\
+        \sum y_i^3 & \sum y_i^2 & \sum y_i^1 \\
+        \sum y_i^2 & \sum y_i^1 & \sum y_i^0
+        \end{array}\right)^{-1}\left(\begin{array}{c}
+        \sum y_i^2 x_i \\
+        \sum y_i^1 x_i \\
+        \sum y_i^0 x_i
+        \end{array}\right)=\left(\begin{array}{c}
+        0.002485 \ldots \\
+        -0.03671 \ldots \\
+        99.13 \ldots
+        \end{array}\right)
         $$
         以上より，$6.0\,\si{\volt}$に対する等電位線は
         $$
-        x=0.00226y^2+0.0711y+69.0\,[\si{mm}]
+        x=0.00249y^2-0.0367y+99.1\,[\si{mm}]
         $$
         となる．
     \end{description}
+
+\begin{landscape}
+    \begin{table}[!ht]
+        \centering
+        \caption{6.0V 周りの電位分布とそのデータ処理}
+        \begin{tabular}{c|c|cc|c|ccc|cc}
+        \hline
+             & \begin{tabular}{c} $y座標$ \\ $[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $x_1=90\,\si{mm}$ \\ $上の電位V_1\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $x_2=150\,\si{mm}$ \\ $上の電位V_2\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $6.0\si{\volt}となる$ \\ $x座標\,[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $y^2$ \\ $[\si{mm^2}]$ \end{tabular} & \begin{tabular}{c} $y^3$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $y^4$ \\ $[\si{mm^4}]$ \end{tabular} & \begin{tabular}{c} $xy^2$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $xy$ \\ $[\si{mm^2}]$ \end{tabular} \\ \hline
+             & -120.00 & 5.50 & 6.08 & 141.72 & 14400.00 & -360.00 & 207360000.00 & 2040827.59 & -17006.90 \\ 
+             & -60.00 & 5.66 & 7.04 & 104.78 & 3600.00 & -180.00 & 12960000.00 & 377217.39 & -6286.96 \\ 
+             & 0.00 & 5.70 & 7.30 & 101.25 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+             & 60.00 & 5.40 & 7.34 & 108.56 & 3600.00 & 180.00 & 12960000.00 & 390804.12 & 6513.40 \\ 
+             & 120.00 & 5.34 & 6.36 & 128.82 & 14400.00 & 360.00 & 207360000.00 & 1855058.82 & 15458.82 \\ \hline
+            合計 &  &  &  & 585.14 & 36000.00 & 0.00 & 440640000.00 & 4663907.92 & -1321.63 \\ \hline
+        \end{tabular}
+    \end{table}
+\end{landscape}
+
+    
+        
+    
     
     \item 設問(2)で得られた結果をグラフ用紙に描け．
     \begin{description}
@@ -46,9 +83,50 @@
         $x=dy^2+ey+f$\,[\si{mm}]とおき，設問(3)と同様にデータ処理を行い，表5に示す．
         表5と最小二乗法より
         $$
-        123
+        \left(\begin{array}{l}
+        d \\
+        e \\
+        f
+        \end{array}\right)=\left(\begin{array}{ccc}
+        \sum y_i^4 & \sum y_i^3 & \sum y_i^2 \\
+        \sum y_i^3 & \sum y_i^2 & \sum y_i^1 \\
+        \sum y_i^2 & \sum y_i^1 & \sum y_i^0
+        \end{array}\right)^{-1}\left(\begin{array}{c}
+        \sum y_i^2 x_i \\
+        \sum y_i^1 x_i \\
+        \sum y_i^0 x_i
+        \end{array}\right)=\left(\begin{array}{c}
+        0.002485 \ldots \\
+        -0.03671 \ldots \\
+        99.13 \ldots
+        \end{array}\right)
         $$
-        
+        以上より，$6.0\,\si{\volt}$に対する等電位線は
+        $$
+        x=0.00249y^2-0.0367y+99.1\,[\si{mm}]
+        $$
+        となる．
     \end{description}
     
+    \item 実験で用いた水道水を純水に変えた場合，この実験はどのようになるか考察せよ．
+    \begin{description}
+        \item 水道水は不純物が溶け込んでいるため，電流を通す．一方で、純水は不純物
+        がないため電気を通さない．実験で用いた水道水を純水に変えた場合，
+        電極板間に電気が流れないため，電場は発生しないと考えられる．
+    \end{description}
+
+    \item もしも水槽内に水道水が入っていなかったら，$\vec{E}$の空間分布はどうなるか？
+    理由と共にそのグラフの概略を示せ．    
+    \begin{description}
+        \item 水道水が入っていない場合，誘電体は空気となる．
+        また，誘電体が変わった場合，誘電率は高くなるため$\vec{E}$の大きさは小さくなり，
+        $\vec{E}$の向きは変わらない．$\vec{E}$の空間分布は実験課題1と変わらな
+        いと考えられる．よって，概略図は図3のようになる．        
+    \end{description}
+
+    \item 実験課題3で得られた結果より等電位線を描け．
+    \begin{description}
+        \item 等電位線を図4に示す．
+    \end{description}
+
 \end{enumerate}
