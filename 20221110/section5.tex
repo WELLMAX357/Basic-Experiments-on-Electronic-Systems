@@ -53,16 +53,16 @@
 \begin{landscape}
     \begin{table}[!ht]
         \centering
-        \caption{6.0V 周りの電位分布とそのデータ処理}
+        \caption{$6.0\si{\volt}$周りの電位分布とそのデータ処理}
         \begin{tabular}{c|c|cc|c|ccc|cc}
         \hline
-             & \begin{tabular}{c} $y座標$ \\ $[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $x_1=90\,\si{mm}$ \\ $上の電位V_1\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $x_2=150\,\si{mm}$ \\ $上の電位V_2\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $6.0\si{\volt}となる$ \\ $x座標\,[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $y^2$ \\ $[\si{mm^2}]$ \end{tabular} & \begin{tabular}{c} $y^3$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $y^4$ \\ $[\si{mm^4}]$ \end{tabular} & \begin{tabular}{c} $xy^2$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $xy$ \\ $[\si{mm^2}]$ \end{tabular} \\ \hline
-             & -120.00 & 5.50 & 6.08 & 141.72 & 14400.00 & -360.00 & 207360000.00 & 2040827.59 & -17006.90 \\ 
-             & -60.00 & 5.66 & 7.04 & 104.78 & 3600.00 & -180.00 & 12960000.00 & 377217.39 & -6286.96 \\ 
-             & 0.00 & 5.70 & 7.30 & 101.25 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-             & 60.00 & 5.40 & 7.34 & 108.56 & 3600.00 & 180.00 & 12960000.00 & 390804.12 & 6513.40 \\ 
-             & 120.00 & 5.34 & 6.36 & 128.82 & 14400.00 & 360.00 & 207360000.00 & 1855058.82 & 15458.82 \\ \hline
-            合計 &  &  &  & 585.14 & 36000.00 & 0.00 & 440640000.00 & 4663907.92 & -1321.63 \\ \hline
+            ~ & \begin{tabular}{c} $y座標$ \\ $[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $x_1=90\,\si{mm}$ \\ $上の電位V_1\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $x_2=150\,\si{mm}$ \\ $上の電位V_2\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $6.0\si{\volt}となる$ \\ $x座標\,[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $y^2$ \\ $[\si{mm^2}]$ \end{tabular} & \begin{tabular}{c} $y^3$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $y^4$ \\ $[\si{mm^4}]$ \end{tabular} & \begin{tabular}{c} $xy^2$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $xy$ \\ $[\si{mm^2}]$ \end{tabular} \\ \hline
+            ~ & -120.00 & 5.50 & 6.08 & 141.72 & 14400.00 & -360.00 & 207360000.00 & 2040827.59 & -17006.90 \\ 
+            ~ & -60.00 & 5.66 & 7.04 & 104.78 & 3600.00 & -180.00 & 12960000.00 & 377217.39 & -6286.96 \\ 
+            ~ & 0.00 & 5.70 & 7.30 & 101.25 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+            ~ & 60.00 & 5.40 & 7.34 & 108.56 & 3600.00 & 180.00 & 12960000.00 & 390804.12 & 6513.40 \\ 
+            ~ & 120.00 & 5.34 & 6.36 & 128.82 & 14400.00 & 360.00 & 207360000.00 & 1855058.82 & 15458.82 \\ \hline
+            合計 & 0.00 & ~ & ~ & 585.14 & 36000.00 & 0.00 & 440640000.00 & 4663907.92 & -1321.63 \\ \hline
         \end{tabular}
     \end{table}
 \end{landscape}
@@ -79,7 +79,7 @@
     \item 実験課題2で得た結果をもとに，電極板の端面近傍での電気力線を表す1次関数を
     1つ求めよ．
     \begin{description}
-        \item ここで、7.5V に対する等電位線を
+        \item ここで，$6.5\si{\volt}$ に対する等電位線を
         $x=dy^2+ey+f$\,[\si{mm}]とおき，設問(3)と同様にデータ処理を行い，表5に示す．
         表5と最小二乗法より
         $$
@@ -96,14 +96,44 @@
         \sum y_i^1 x_i \\
         \sum y_i^0 x_i
         \end{array}\right)=\left(\begin{array}{c}
-        0.002485 \ldots \\
-        -0.03671 \ldots \\
-        99.13 \ldots
+        -0.004151 \ldots \\
+        0.9570 \ldots \\
+        101.49
         \end{array}\right)
         $$
-        以上より，$6.0\,\si{\volt}$に対する等電位線は
+        以上より，$6.5\,\si{\volt}$に対する等電位線は
         $$
-        x=0.00249y^2-0.0367y+99.1\,[\si{mm}]
+        x=-0.00415y^2+0.957y+101.5\,[\si{mm}]
+        $$
+        となる．
+    \end{description}
+
+\begin{landscape}
+    \begin{table}[!ht]
+        \centering
+        \caption{$6.5\si{\volt}$周りの電位分布とそのデータ処理}
+        \begin{tabular}{c|c|cc|c|ccc|cc}
+        \hline
+            ~ & \begin{tabular}{c} $y座標$ \\ $[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $x_1=150\,\si{mm}$ \\ $上の電位V_1\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $x_2=160\,\si{mm}$ \\ $上の電位V_2\,[\si{\volt}]$ \end{tabular} & \begin{tabular}{c} $6.5\si{\volt}となる$ \\ $x座標\,[\si{mm}]$ \end{tabular} & \begin{tabular}{c} $y^2$ \\ $[\si{mm^2}]$ \end{tabular} & \begin{tabular}{c} $y^3$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $y^4$ \\ $[\si{mm^4}]$ \end{tabular} & \begin{tabular}{c} $xy^2$ \\ $[\si{mm^3}]$ \end{tabular} & \begin{tabular}{c} $xy$ \\ $[\si{mm^2}]$ \end{tabular} \\ \hline
+            ~ & 80.00 & 6.32 & 7.42 & 151.64 & 6400.00 & 512000.00 & 40960000.00 & 970472.73 & 12130.91 \\ 
+            ~ & 90.00 & 6.14 & 7.12 & 153.67 & 8100.00 & 729000.00 & 65610000.00 & 1244755.10 & 13830.61 \\ 
+            ~ & 100.00 & 6.12 & 6.80 & 155.59 & 10000.00 & 1000000.00 & 100000000.00 & 1555882.35 & 15558.82 \\ 
+            ~ & 110.00 & 6.16 & 6.64 & 157.08 & 12100.00 & 1331000.00 & 146410000.00 & 1900708.33 & 17279.17 \\ 
+            ~ & 120.00 & 6.06 & 6.76 & 156.29 & 14400.00 & 1728000.00 & 207360000.00 & 2250514.29 & 18754.29 \\ \hline
+            合計 & 500.00 & ~ & ~ & 774.27 & 51000.00 & 5300000.00 & 560340000.00 & 7922332.80 & 77553.80 \\ \hline
+        \end{tabular}
+    \end{table}
+\end{landscape}
+
+    \item 設問(4)で求めた電気力線と，原点を通る電気力線との成す角を求めよ．
+    \begin{description}
+        \item 原点を通る電気力線は，無限に広がる電極板と同じように$y$軸に平行
+        と考えられる．
+        設問(4)より，求めた電気力線の傾きは$-0.00415$で，
+        向きは$x$が増加していく向きである．
+        よって，求めるなす角$\theta$は
+        $$
+        \theta=90-\arctan(-0.00415)=90.2\,^\circ
         $$
         となる．
     \end{description}
