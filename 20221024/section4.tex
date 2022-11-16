@@ -6,13 +6,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 本実験で測定したデータを表1に示す．
+また，測定結果から|Z(\omega)|，$I_{ratio}$及び$\theta$の算出には以下の式を用いる．
+$$
+|Z(\omega)|=\frac{|V_1|}{|V_2|}\times R^\prime
+$$
+$$
+I_{ratio}=\frac{|V_1\times R^\prime}{|V_2|\times R}
+$$
+$$
+\theta=\Delta T \times f \times 360
+$$
 
 \begin{table}[H]
     \centering
     \caption{測定したデータ及び考察のためのデータ処理}
     \begin{tabular}{c|cc|cccc}
     \hline
-        測定周波数$f$\,[Hz] & $v_1$\,[mV] & $v_2$\,[mV] & \Delta T\,[\mu s] & Z(\omega)\,[\Omega] & \theta\,[$^\circ$] & $I_{ratio}$ \\ \hline
+        測定周波数$f$\,[Hz] & $|V_1|$\,[mV] & $|V_2|$\,[mV] & \Delta T\,[\mu s] & |Z(\omega)|\,[\Omega] & \theta\,[$^\circ$] & $I_{ratio}$ \\ \hline
         100 & 14 & 150 & 3800.0 & 0.9 & 136.8 & 0.042 \\ 
         1000 & 85 & 150 & 190.0 & 5.7 & 68.4 & 0.258 \\ 
         1600 & 140 & 150 & 105.0 & 9.3 & 60.5 & 0.424 \\ 
