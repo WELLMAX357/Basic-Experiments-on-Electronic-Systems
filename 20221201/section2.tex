@@ -1,0 +1,30 @@
+% !TEX root = main.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{原理}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+変位電流密度$\vec{i_d}$とは電束$\vec{D}$の時間変化であり，
+以下の式で与えられる．
+$$
+\vec{i_d}=\frac{\partial\vec{D}}{\partial t}
+$$
+
+また，平行平板への電圧限として交流を与え場合について考える．微小区間$\Delta x$
+離れた二点での電位を測定すると電場は，$|\vec{E}|=\frac{\Delta V}{\Delta x}$
+で計算でき，電束密度を$\vec{E}=\epsilon\vec{D}$と仮定できる．
+したがって，変位電流密度$\vec{i_d}$は以下の式で与えられる．
+$$
+|\vec{i_d}|=|\frac{\partial\vec{D}}{\partial t}|=\epsilon|\frac{\partial}{\partial t}(\frac{\Delta V}{\Delta x})|=\frac{\epsilon}{\Delta x}|\frac{\partial}{\partial t}(\Delta V)|
+$$
+ここで，平行平板に印加する$V$の角周波数を$\omega$とすると，$V\propto \sin \omega t$と書けるので，
+平行平板電極の面積を$S$．二点での電位をそれぞれ$V_1 = A\sin \omega t$，$V_2=B\sin \omega t$
+とすると変位電流の大きさ$I_{dmax}$は以下の式で求められる．
+$$
+|I_{dmax}|=\frac{\epsilon}{\Delta x}|(A-B)\omega|
+$$
+また，ロゴスキーコイルにおいてロゴスキーコイルの両端に現れる誘導電圧を$V_e(t)=C\sin \omega t$
+とすると，変位電流の大きさ$I_d$は以下の式で求められる．
+$$
+|I_{dmax}|=-|\frac{l}{\mu_0 NS}\int_{\frac{\pi}{2}}^{\pi}V_e(t)dt|=\frac{l}{\mu_0 NS}\cdot\frac{C}{\omega}
+$$
