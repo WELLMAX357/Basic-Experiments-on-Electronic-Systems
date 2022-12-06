@@ -5,8 +5,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{enumerate}
-    \item $$の両辺の発散をとることで，この式が電荷保存則$$を確かに満たしていることを示せ．
+    \item $\nabla \times \vec{H}=(i+\frac{\partial \vec{D}}{\partial t})$の両辺の発散をとることで，
+    この式が電荷保存則$\frac{\partial \rho}{\partial t}+\nabla\cdot i=0$を確かに満たしていることを示せ．
     \begin{description}
-        \item[] 両辺の発散をとると，任意のベクトル$\vec{A}$に関して，$$となることから，
+        \item[] 両辺の発散をとると，任意のベクトル$\vec{A}$に関して，$\mathrm{div}(\mathrm{rot} \vec{A})$となることから，
+        $$
+        \nabla \cdot(\nabla \times \vec{H})=\nabla \cdot\left(i+\frac{\partial \vec{D}}{\partial t}\right)=\nabla \cdot i+\frac{\partial(\nabla \cdot \vec{D})}{\partial t}=0
+        $$
+        となる．
+        ここで，ガウスの法則より$\mathrm{div}\vec{D}=\rho$であるので，以下の式が成り立ち，題意は示された．
+        $$
+        \nabla \cdot i+\frac{\partial(\nabla \cdot \vec{D})}{\partial t}=\frac{\partial \rho}{\partial t}+\nabla \cdot i=0
+        $$
+
     \end{description}
 \end{enumerate}
